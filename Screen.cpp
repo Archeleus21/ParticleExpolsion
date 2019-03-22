@@ -64,18 +64,13 @@ bool Screen::Init()
 	/*
 	buffer[30000] = 0xFFFFFF;  // 0xFF = white or 255 or max value a byte can have
 							   // 0xRGBA or 0xFFFFFFFF or 255, 255, 255, 255
-	*/
-
+							   
 	//loop to change every pixel on screen
 	for (int i = 0; i < SCREEN_WIDTH * SCREEN_HEIGHT; i++)
 	{
 		m_buffer[i] = 0xFF00FFFF;  //color 0x"R""G""B""A" or 0x00000000 hex goes from 0-F with 8 being half strength.
 	}
-
-	SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH * sizeof(Uint32));  //updates the texture, the stored memory or buffer, then the width of the screen * the size of the memory allocated per pixel
-	SDL_RenderClear(m_renderer); //clears renderer
-	SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);  //passes renderer
-	SDL_RenderPresent(m_renderer);  //display renderer
+	*/
 
 	return true;
 }
@@ -105,4 +100,34 @@ void Screen::Close()
 	//quits
 	SDL_Quit();
 
+}
+
+void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)	
+{
+
+	//will not print pixel off screen
+	if (x < 0 || x >= SCREEN_WIDTH || y < 0 || y >= SCREEN_HEIGHT)
+	{
+		return;
+	}
+
+	Uint32 color = 0;
+
+	color += red;
+	color <<= 8;
+	color += green;
+	color <<= 8;
+	color += blue;
+	color <<= 8;
+	color += 0xFF;
+
+	m_buffer[(y * SCREEN_WIDTH) + x] = color;
+}
+
+void Screen::Update()
+{
+	SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH * sizeof(Uint32));  //updates the texture, the stored memory or buffer, then the width of the screen * the size of the memory allocated per pixel
+	SDL_RenderClear(m_renderer); //clears renderer
+	SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);  //passes renderer
+	SDL_RenderPresent(m_renderer);  //display renderer
 }

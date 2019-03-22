@@ -1,2 +1,5 @@
-﻿  Screen.cpp
+﻿  ParticleExplosion.cpp
+d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(48): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(49): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(51): warning C4244: 'argument': conversion from 'double' to 'Uint8', possible loss of data
   ParticleExplosion.vcxproj -> D:\Online Programming Courses\Udemy Courses\C plus plus Tutorial for Beginners\Section 8\Particle Fire Explosion\ParticleExplosion\Debug\ParticleExplosion.exe
