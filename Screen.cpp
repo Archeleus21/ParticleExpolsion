@@ -125,9 +125,14 @@ void Screen::SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue)
 }
 
 void Screen::Update()
-{
+{	
 	SDL_UpdateTexture(m_texture, NULL, m_buffer, SCREEN_WIDTH * sizeof(Uint32));  //updates the texture, the stored memory or buffer, then the width of the screen * the size of the memory allocated per pixel
 	SDL_RenderClear(m_renderer); //clears renderer
 	SDL_RenderCopy(m_renderer, m_texture, NULL, NULL);  //passes renderer
 	SDL_RenderPresent(m_renderer);  //display renderer
+}
+
+void Screen::ClearScreen()
+{
+	memset(m_buffer, 0, SCREEN_WIDTH * SCREEN_HEIGHT * sizeof(Uint32));
 }

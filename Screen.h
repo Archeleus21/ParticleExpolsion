@@ -23,5 +23,6 @@ public:
 	void Close();
 	void Update();
 	void SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
+	void ClearScreen();
 };
 

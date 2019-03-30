@@ -4,7 +4,7 @@
 class Swarm
 {
 public:
-	const static int NPARTICLES = 5000;  //creates particles
+	const static int NPARTICLES = 2500;  //creates particles
 
 private:
 	Particle *m_pParticles;
@@ -12,6 +12,7 @@ private:
 public:
 	Swarm();
 	~Swarm();
+	void Update();
 
 	//gets particles
 	Particle *const GetParticles() { return m_pParticles; };  //cant change pointer

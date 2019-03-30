@@ -8,8 +8,13 @@ struct Particle
 	double m_x; //x position
 	double m_y;  //y position
 
+	double m_xSpeed;   //used for random number made into a decimal
+	double m_ySpeed;   //used for random number made into a decimal
+
+
 public:
 	Particle();
 	~Particle();
+	void Update();
 };
 
