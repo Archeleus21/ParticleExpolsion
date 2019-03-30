@@ -4,7 +4,7 @@
 class Swarm
 {
 public:
-	const static int NPARTICLES = 2500;  //creates particles
+	const static int NPARTICLES = 5000;  //creates particles
 
 private:
 	Particle *m_pParticles;
