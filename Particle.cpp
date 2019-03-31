@@ -24,7 +24,7 @@ Particle::Particle()
 	m_direciton = (2 * M_PI  * rand()) / RAND_MAX;
 
 	//random speed from 0.0 - 1.0
-	m_speed = (0.001 * rand()) / RAND_MAX;
+	m_speed = (0.0001 * rand()) / RAND_MAX;
 }
 
 
@@ -33,7 +33,7 @@ Particle::~Particle()
 
 }
 
-void Particle::Update()
+void Particle::Update(int interval)
 {
 	/*
 	m_x += m_xSpeed;
@@ -56,6 +56,7 @@ void Particle::Update()
 	double xSpeed = m_speed * cos(m_direciton);
 	double ySpeed = m_speed * sin(m_direciton);
 
-	m_x += xSpeed;
-	m_y += ySpeed;
+	//moves particles
+	m_x += xSpeed * interval;
+	m_y += ySpeed * interval;
 }

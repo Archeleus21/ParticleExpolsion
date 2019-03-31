@@ -8,11 +8,12 @@ public:
 
 private:
 	Particle *m_pParticles;
+	int lastTime;  //time of last frame
 
 public:
 	Swarm();
 	~Swarm();
-	void Update();
+	void Update(int elapsedTime);
 
 	//gets particles
 	Particle *const GetParticles() { return m_pParticles; };  //cant change pointer

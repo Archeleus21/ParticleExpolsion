@@ -1,10 +1,8 @@
-﻿  ParticleExplosion.cpp
-d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(52): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(53): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-d:\online programming courses\udemy courses\c plus plus tutorial for beginners\section 8\particle fire explosion\particleexplosion\particleexplosion.cpp(55): warning C4244: 'argument': conversion from 'double' to 'Uint8', possible loss of data
+﻿  Particle.cpp
+  Swarm.cpp
   Generating code
   1 of 30 functions ( 3.3%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   ParticleExplosion.vcxproj -> D:\Online Programming Courses\Udemy Courses\C plus plus Tutorial for Beginners\Section 8\Particle Fire Explosion\ParticleExplosion\Release\ParticleExplosion.exe
