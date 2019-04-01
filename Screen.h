@@ -8,7 +8,8 @@ private:
 	SDL_Window *m_window;
 	SDL_Renderer *m_renderer;
 	SDL_Texture *m_texture;
-	Uint32 *m_buffer;
+	Uint32 *m_buffer1;  //used for first pixels
+	Uint32 *m_buffer2;  //used for bluring seconds pixels
 
 public:
 	//sets window width and height
@@ -23,6 +24,7 @@ public:
 	void Close();
 	void Update();
 	void SetPixel(int x, int y, Uint8 red, Uint8 green, Uint8 blue);
-	void ClearScreen();
+	//void ClearScreen();
+	void BoxBlur();
 };
 
