@@ -11,8 +11,12 @@ struct Particle
 	//double m_xSpeed;   //used for random number made into a decimal
 	//double m_ySpeed;   //used for random number made into a decimal
 
+private:
 	double m_speed;
-	double m_direciton;
+	double m_direction;
+	
+private:
+	void Init();
 
 public:
 	Particle();
